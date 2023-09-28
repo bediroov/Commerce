@@ -1,0 +1,90 @@
+.header{
+    width: auto;
+    height: 59px;
+}
+
+#account {
+    width: auto;
+    height: auto;
+    background-color: rgb(247, 245, 243);
+    position: relative;
+    
+    &:hover {
+    
+        .features{
+            opacity: 1;
+            top:30px;
+            background-color: aquamarine  ;
+        }
+    
+    }
+
+    .features {
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 40px;
+        opacity: 0;
+        transition: .5s linear;
+        border-radius: 2px;
+        background-color: aqua !important;
+
+        ul {
+            
+
+            li {
+                color: rgb(0, 0, 0);
+                list-style: none;
+               
+                &:hover{
+
+                    color: chocolate;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+
+#lang{
+    width: auto;
+    height: auto;
+    background-color: white !important;
+    position: relative;
+ 
+ 
+
+&:hover{
+
+    .usdfeatures{
+        opacity: 1;
+        background-color: rgb(103, 47, 47);
+        top:30px;
+      
+    }
+}
+
+
+.usdfeatures{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 40px;
+    opacity: 0;
+    transition: .5s linear;
+    border-radius: 2px;
+    background-color: aqua !important;
+    ul{
+
+        li{
+            color: rgb(0, 0, 0);
+            list-style: none;
+        }
+    }
+}
+
+
+}
