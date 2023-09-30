@@ -1,53 +1,121 @@
-#account {
+body {
+  margin: 0px;
+  overflow-x: hidden;
+  color: rgb(0, 0, 0);
+}
+
+.header {
   width: auto;
   height: auto;
-  background-color: brown;
+}
+.header #account {
+  width: auto;
+  height: auto;
+  background-color: rgb(247, 245, 243);
   position: relative;
 }
-
-#account:hover .features {
+.header #account:hover .features {
   opacity: 1;
-  -webkit-transition: 1s linear;
-  transition: 1s linear;
-  left: 10px;
+  top: 30px;
+  background-color: aquamarine;
 }
-
-#account .features {
+.header #account .features {
   width: auto;
   height: auto;
-  background-color: green;
   position: absolute;
   top: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   opacity: 0;
+  transition: 0.5s linear;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255) !important;
+  z-index: 2 !important;
 }
-
-#account .features ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#account .features ul li {
-  color: red;
+.header #account .features ul li {
+  color: rgb(0, 0, 0);
   list-style: none;
 }
-/*# sourceMappingURL=style.css.map */
+.header #account .features ul li:hover {
+  color: chocolate;
+}
+.header #lang {
+  width: auto;
+  height: auto;
+  background-color: white !important;
+  position: relative;
+}
+.header #lang:hover .usdfeatures {
+  opacity: 1;
+  background-color: rgb(103, 47, 47);
+  top: 30px;
+}
+.header #lang .usdfeatures {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 40px;
+  opacity: 0;
+  transition: 0.5s linear;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255) !important;
+  z-index: 2;
+}
+.header #lang .usdfeatures ul li {
+  color: rgb(0, 0, 0);
+  list-style: none;
+}
+
+.headerinner {
+  width: auto;
+  height: auto;
+  background-color: rgb(217, 137, 25);
+}
+.headerinner .navbar-brand {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.headerinner .aboutbox {
+  width: auto;
+  height: auto;
+  margin-left: 20px;
+}
+
+.navbar .navbar-nav .nav-item a {
+  padding: 22px;
+  color: aliceblue;
+}
+
+.navbar .navbar-nav .nav-item a:hover {
+  background-color: aqua;
+}
+
+.headerbottom {
+  width: auto;
+  height: 20vh;
+}
+
+@media (max-width: 992px) {
+  .drop {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 450px) {
+  .none1 {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  .none2 {
+    display: none;
+  }
+}
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+li {
+  list-style: none;
+}/*# sourceMappingURL=style.css.map */
