@@ -9,10 +9,40 @@
   .none1{
     display: none;
   }
+
+ 
+  
 }
 
 @media(max-width:450px){
   .none2{
     display: none;
   }
+
+
+
 }
+
+
+
+
+@media(max-width:375px){
+ 
+
+
+
+
+    .head{
+     color: rgb(6, 8, 8);
+    }
+
+    .image{
+        img{
+          display: block;
+        }
+    }
+
+    }
+
+
+  

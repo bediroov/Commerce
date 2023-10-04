@@ -1,5 +1,5 @@
 import { Button } from 'bootstrap/dist/js/bootstrap.bundle';
-import React from 'react'
+import React, { useState } from 'react'
 import { Col, Form, InputGroup, NavDropdown, Row } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 
 const Header = () => {
+
 
 
 
@@ -20,7 +21,12 @@ const Header = () => {
           <Container>
             <Navbar.Brand id='changecontext' href="#home">
 
-              <div className="head"><h4>jed disgon full body sa</h4></div>
+
+              <div className="head"><h4 id='one'>20% discount sj namehystx</h4>
+                
+              </div>
+
+              <div className="image"> <img src="https://cdn11.bigcommerce.com/s-3zqjz60dg3/images/stencil/original/logo-default_1515811017__78747.original.png" alt="" /></div>
 
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -65,7 +71,7 @@ const Header = () => {
           <nav className="navbar navbar-expand-lg  navbar-light bg-light navbar-fixed-top ">
             <div className="container-fluid">
 
-              <div className="image"> <img src="https://cdn11.bigcommerce.com/s-3zqjz60dg3/images/stencil/original/logo-default_1515811017__78747.original.png" alt="" /></div>
+              <div className="image "> <img src="https://cdn11.bigcommerce.com/s-3zqjz60dg3/images/stencil/original/logo-default_1515811017__78747.original.png" alt="" /></div>
 
               <button
                 className="navbar-toggler"
@@ -110,10 +116,10 @@ const Header = () => {
                 </ul>
                 <form className="d-flex" role="search">
                   <div className="boxbottom  d-flex">
-                    <div className="image me-2">
+                    <div className="imagebottom me-2">
                       <img width={40} height={40} src="https://www.mytrendyphone.co.uk/images/Wireless-Gaming-Headset-L850-with-RGB-Light-Orange-13062023-01-p.webp" alt="" />
                     </div>
-                    <div className="aboutbox ms-2">
+                    <div className="aboutbox ">
                       <strong style={{ color: "black" }}>Call us now:</strong>
                       <span style={{ color: "black" }}>(+82) 526 726 28</span>
                       <br />
@@ -135,92 +141,67 @@ const Header = () => {
         </div>
 
 
-        {/* <div className="headerbottom ">
-          <div class="container">
-            <div class="row">
-              <Col sm={6} md={3}>
-                <div className=" leftside">
-                  <i class="fa-solid fa-align-left"></i>
-                  <span>All Categories</span>
-                </div>
-              </Col>
-
-              <Col sm={6} >
-                <div className=" inner">
-
-                  <InputGroup className="mb-3 ">
-                    <Form.Control
-                      placeholder="Search the store"
-                      aria-label="Recipient's username"
-                      aria-describedby="basic-addon2"
-                    />
-                    <InputGroup.Text id="basic-addon2"><i className="fa-solid fa-magnifying-glass"></i></InputGroup.Text>
-                  </InputGroup>
 
 
-                </div>
-
-              </Col>
-
-              <Col sm={6} md={3} >
-                <div className=" right ms-5">
-                  <i class="fa-solid fa-heart"></i>
-
-                  <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-
-              </Col>
-
-            </div>
-
-          </div>
-
-
-
-        </div> */}
-
-
-        <div className="header-bottom">
+        <div className="headerbottom">
           <div className="container">
             <div className="row">
-              <div className="header-bottom-left col-lg-3 col-md-2 col-3 ">
-                <div className="top">
-                  <i className="fa-solid fa-align-left"></i>
-                  <span>All Categories</span>
-                  <i className="fa-solid fa-caret-down"></i>
+              <div style={{ backgroundColor: "black" }} className="col-sm-12 col-sm-6 col-md-3 ">
+                <div className="category ">
+                  <div className="icon"><i className="fa-solid fa-align-left"></i></div>
+                  <div className="writing">All Categories</div>
+                  <div className="down"><i className="fa-sharp fa-solid fa-caret-down"></i></div>
                 </div>
-
               </div>
 
-              <div className="header-bottom-right col-lg-9 col-md-10 col-9">
-               <div className="row">
-               <div className="search d-flex">
-               <input class="form-control form-input" data-search-quick="" name="search_query" id="search_query" data-error-message="Search field cannot be empty." placeholder="Search the store" autocomplete="off"></input>
-               <button class="btn btn-outline-secondary" id="btn-quickSearch" type="submit"><i class="fa fa-search"></i></button>
-               </div>
+              <div className="col-sm-12 col-sm-6 col-md-6 ">
+                <form className='' >
+                  <fieldset className='form-fieldset'>
+                    <div className="input-group d-flex align-items-center">
+                      <input
+                        className="form-control form-input "
+                        data-search-quick=""
+                        name="search_query"
+                        id="search_query"
+                        data-error-message="Search field cannot be empty."
+                        placeholder="Search the store"
+                        autoComplete="off"
+                      />
 
-              <div className="cart-bottom">
-                <ul>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                </ul>
+
+                      <div className="inputappend">
+                        <button className="btn btn-outline" id="btn-quickSearch" type="submit"><i class="fa fa-search"></i></button>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
               </div>
 
+              <div className="col-sm-12 col-sm-6 col-md-3 col-lg-3 ">
+                <div className="headerbottomcart  ">
+
+                  <ul className='navuser '>
+                    <li className='navuseritem'>
+                      <a class="cart-button cart-button--wishlist" href="/wishlist.php">
+                        <i className="fa-solid fa-heart"></i>
+                      </a>
+                    </li>
 
 
-             
-               </div>
+                    <li className='navuseritem'>
+                      <a class="cart-button cart-button--primary" data-cart-preview="" data-dropdown="cart-preview-dropdown" data-options="align:left" href="/cart.php" aria-expanded="false">
+                        <i className="fa-solid fa-cart-shopping"></i>
+                      </a>
+                    </li>
+
+
+                  </ul>
+
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-
-
-
-
-
-
 
 
 

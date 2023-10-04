@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Header from './Header'
+import Sectionone from './Sectionone';
+import Sectiontwo from './Sectiontwo';
 
 
 
@@ -31,7 +33,9 @@ const Home = () => {
 
   return (
     <div>
-  <Header  count={count} />
+  <Header  count={count}  />
+  <Sectionone/>
+  <Sectiontwo/>
     </div>
   )
 }
