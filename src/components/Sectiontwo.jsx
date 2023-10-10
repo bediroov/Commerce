@@ -1,27 +1,58 @@
-import React from 'react'
-import data from '../data/Product'
+import React, { useContext } from 'react'
 import Singlecard from './Singlecard'
+import ProductContext from '../context/ProductContext'
+import { Col, Container, Row } from 'react-bootstrap'
 
 
 const Sectiontwo = () => {
 
+    const [product] = useContext(ProductContext);
+
+
+    const mapproduct = product.map((item) => {
+        return (<Col sm={6} md={2}>
+            <Singlecard
+                id={item.id}
+                name={item.name}
+                url={item.url}
+                key={item.id}
+            />
+        </Col>
+        )
+    })
+
+
+
+
+   
 
 
     return (
-        <section className='sectiontwo '>
+        <section className='sectiontwo  '>
             <div className="container">
 
-                <div className="blog-title">
-                    <h2 className='tag'>Featured Categories</h2>
-                </div>
+               <div className='module sb-banner sb-banner--feature_category '>
+                <h5 className='block-title'>Featured Categories</h5>
+                
+               </div>
 
-              
-         {
-            data.map((item)=>{
-                return <Singlecard/>
-            })
-         }
-            
+
+
+
+              <Container>
+              < Row className='g-5 cards-row '>
+
+{
+    product.length > 0 ? <>{mapproduct.slice(0, 5)}</> : null
+}
+
+
+</Row>
+              </Container>
+
+
+
+
 
 
             </div>

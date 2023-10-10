@@ -4,11 +4,29 @@ import { Col, Form, InputGroup, NavDropdown, Row } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
+import langData from '../langData';
 
 const Header = () => {
 
 
+  if(localStorage.getItem("lang")==undefined){
+    localStorage.setItem("lang","en")
+  }
+
+
+  const [mydata,setMydata] = useState(localStorage.getItem("lang")=="en"?langData.en:langData.az)
+
+
+  const langfunc=()=>{
+  if (localStorage.getItem("lang")=="en") {
+    localStorage.setItem("lang","az")
+  }else{
+    localStorage.setItem("lang","en")
+  }
+
+  window.location.reload(true)
+
+  }
 
 
   return (
@@ -88,8 +106,10 @@ const Header = () => {
                 <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                   <li className="nav-item">
                     <a style={{ color: "black" }} className="nav-link active" aria-current="page" href="#">
-                      Home
+                      {mydata.header.home}
                     </a>
+
+                    <button onClick={langfunc}>dil</button>
                   </li>
                   <li className="nav-item">
                     <a style={{ color: "black" }} className="nav-link" href="#">

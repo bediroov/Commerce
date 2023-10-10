@@ -1,24 +1,27 @@
-import { Button } from 'bootstrap/dist/js/bootstrap.bundle'
+import { Button } from 'react-bootstrap'
 import React from 'react'
 import { Card } from 'react-bootstrap'
 
-const Singlecard = () => {
+const Singlecard = ({ id, url, name }) => {
+  console.log(name);
   return (
-   <>
-    <Card >
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <button variant="primary">Go somewhere</button>
-      </Card.Body>
-    </Card>
-   
-   </>
+    <>
+      <Card className='card ' >
+        <Card.Img variant="top" src={url} />
+        <Card.Body>
+          <Card.Title>{name.slice(0, 10)}</Card.Title>
+
+          <Button variant="primary">{id}</Button>
+        </Card.Body>
+      </Card>
+
+    </>
+
   )
+
+
 }
+
+
 
 export default Singlecard
